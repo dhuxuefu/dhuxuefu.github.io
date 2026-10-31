@@ -1,0 +1,37 @@
+{
+  "siteName": "东华大学一站式学生服务大厅",
+  "shortName": "学服大厅",
+  "slogan": "服务为本 · 用心奉献 · 团结友爱 · 砥砺前行",
+  "founded": "2023年6月",
+  "address": "上海市松江区人民北路2999号 大学生活动中心101-103室",
+  "hours": "周一至周五 10:00-19:00（法定节假日除外）",
+  "email": "dhuxuefu@163.com",
+  "officialAccount": "",
+  "qrcode": "",
+  "videoUrl": "",
+  "videoPoster": "",
+  "banners": [
+    {
+      "img": "assets/img/banner-1.png",
+      "title": "服务大厅一览",
+      "link": ""
+    },
+    {
+      "img": "assets/img/banner-2.webp",
+      "title": "2025秋季学期总结大会",
+      "link": ""
+    },
+    {
+      "img": "assets/img/banner-3.png",
+      "title": "柜台服务日常",
+      "link": ""
+    }
+  ],
+  "links": [
+    {
+      "name": "东华大学网上服务大厅",
+      "url": "http://ehall.dhu.edu.cn",
+      "note": "活动室预约、校园卡服务、各类业务线上办理入口"
+    }
+  ]
+}
