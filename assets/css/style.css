@@ -257,7 +257,7 @@ a.card:hover{box-shadow:0 4px 14px rgba(0,0,0,.1);transform:translateY(-2px);tex
 .info-list{list-style:none}
 .info-list li{padding:10px 0;border-bottom:1px dashed var(--line);font-size:15px}
 .info-list li:last-child{border-bottom:none}
-.info-list .k{color:var(--muted);display:inline-block;min-width:96px;font-family:var(--font-ui)}
+.info-list .k{color:var(--muted);display:inline-block;min-width:96px;font-family:var(--font)}
 .info-list a{color:var(--brand-dark)}
 .video-wrap{margin-top:14px}
 .video-wrap video{width:100%;border-radius:var(--radius);background:#000}
