@@ -36,7 +36,7 @@ main{flex:1 0 auto;width:100%}
 a{color:var(--brand-dark);text-decoration:none}
 a:hover{color:var(--brand);text-decoration:underline}
 img{max-width:100%;display:block}
-.container{max-width:1220px;margin:0 auto;padding:0 24px}
+.container{max-width:1400px;margin:0 auto;padding:0 24px}
 .skip{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:8px 14px;z-index:999}
 .skip:focus{left:0}
 
@@ -47,7 +47,7 @@ img{max-width:100%;display:block}
   border-bottom:1px solid var(--brand-dark);
 }
 .nav-inner{
-  max-width:1220px;margin:0 auto;padding:8px 24px;
+  max-width:1400px;margin:0 auto;padding:8px 24px;
   display:flex;align-items:center;gap:14px;
 }
 .nav-logo{display:flex;align-items:center;gap:10px;min-width:0}
@@ -86,7 +86,7 @@ img{max-width:100%;display:block}
 .hero{background:var(--brand-light);border-bottom:1px solid var(--line)}
 .hero .carousel{margin:24px 0 30px}
 .hero-inner{
-  max-width:1220px;margin:0 auto;padding:44px 24px 38px;
+  max-width:1400px;margin:0 auto;padding:44px 24px 38px;
   display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;
 }
 .hero-logo{max-width:480px;width:100%;border-radius:24px;background:var(--brand);padding:20px 28px;box-shadow:var(--shadow)}
@@ -294,7 +294,7 @@ a.card:hover{box-shadow:0 4px 14px rgba(0,0,0,.1);transform:translateY(-2px);tex
 
 /* ============ 页脚 ============ */
 footer{background:#263238;color:#B0BEC5;margin-top:48px}
-.footer-inner{max-width:1220px;margin:0 auto;padding:32px 24px 20px}
+.footer-inner{max-width:1400px;margin:0 auto;padding:32px 24px 20px}
 .footer-grid{display:grid;gap:26px;grid-template-columns:1fr}
 @media (min-width:720px){.footer-grid{grid-template-columns:2fr 1fr 1fr}}
 footer h4{color:#fff;font-size:15px;margin-bottom:10px;font-weight:600}
