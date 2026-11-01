@@ -84,7 +84,7 @@ img{max-width:100%;display:block}
 
 /* ============ 首页 hero ============ */
 .hero{background:var(--brand-light);border-bottom:1px solid var(--line)}
-.hero .carousel{margin:24px 0 30px}
+.hero .carousel{max-width:1460px;width:calc(100% - 48px);margin:24px auto 30px}
 .hero-inner{
   max-width:1400px;margin:0 auto;padding:44px 24px 38px;
   display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;
@@ -141,9 +141,9 @@ img{max-width:100%;display:block}
 }
 a.card:hover{box-shadow:0 4px 14px rgba(0,0,0,.1);transform:translateY(-2px);text-decoration:none}
 .card h3{font-size:18px;color:var(--ink);margin-bottom:4px;display:flex;align-items:center;gap:8px}
-.card .card-dept{font-size:12px;color:var(--muted);margin-bottom:8px;font-family:var(--font-ui)}
+.card .card-dept{font-size:12px;color:var(--muted);margin-bottom:8px;font-family:var(--font)}
 .card p{font-size:14px;color:var(--muted)}
-.card .more{margin-top:10px;font-size:14px;color:var(--brand-dark);font-weight:600;font-family:var(--font-ui)}
+.card .more{margin-top:10px;font-size:14px;color:var(--brand-dark);font-weight:600;font-family:var(--font)}
 
 /* ============ 通知列表 ============ */
 .notice-item{
@@ -243,7 +243,7 @@ a.card:hover{box-shadow:0 4px 14px rgba(0,0,0,.1);transform:translateY(-2px);tex
   position:relative;padding-left:20px;font-size:14px;color:var(--muted);margin-top:6px;
 }
 .tips li::before{content:"•";position:absolute;left:4px;color:var(--brand);font-weight:700}
-.tips-title{font-size:13px;font-weight:700;color:var(--brand-dark);margin-top:12px;font-family:var(--font-ui)}
+.tips-title{font-size:13px;font-weight:700;color:var(--brand-dark);margin-top:12px;font-family:var(--font)}
 .counter-nav{
   display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;
 }
