@@ -82,7 +82,7 @@ img{max-width:100%;display:block}
 
 /* ============ 首页 hero ============ */
 .hero{background:var(--brand-light);border-bottom:1px solid var(--line)}
-.hero .carousel{margin:44px 0 38px}
+.hero .carousel{margin:24px 0 30px}
 .hero-inner{
   max-width:1220px;margin:0 auto;padding:44px 24px 38px;
   display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;
@@ -268,9 +268,27 @@ a.card:hover{box-shadow:0 4px 14px rgba(0,0,0,.1);transform:translateY(-2px);tex
 .carousel{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
 .slide{display:none}
 .slide.active{display:block}
-.slide img{width:100%;height:320px;object-fit:cover}
+.slide img{width:100%;height:360px;object-fit:cover}
 .slide-cap{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.55));color:#fff;padding:32px 16px 12px;font-size:15px}
-@media (max-width:560px){.slide img{height:200px}}
+.carousel .nav-btn{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:5;
+  width:44px;height:44px;border-radius:50%;border:none;cursor:pointer;
+  background:rgba(255,255,255,.85);color:var(--brand-dark);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--shadow);transition:background .15s,transform .15s;
+}
+.carousel .nav-btn:hover{background:#fff}
+.carousel .nav-btn.prev{left:14px}
+.carousel .nav-btn.next{right:14px}
+.carousel .dots{position:absolute;bottom:14px;left:0;right:0;display:flex;gap:8px;justify-content:center;z-index:5}
+.carousel .dots button{width:10px;height:10px;border-radius:50%;border:none;padding:0;cursor:pointer;background:rgba(255,255,255,.55);transition:background .15s,transform .15s}
+.carousel .dots button.active{background:#fff;transform:scale(1.25)}
+@media (max-width:560px){
+  .slide img{height:220px}
+  .carousel .nav-btn{width:36px;height:36px}
+  .carousel .nav-btn.prev{left:8px}
+  .carousel .nav-btn.next{right:8px}
+}
 
 /* ============ 页脚 ============ */
 footer{background:#263238;color:#B0BEC5;margin-top:48px}

@@ -199,12 +199,45 @@
           carousel.appendChild(div);
         });
         var idx = 0, slides = $$(".slide", carousel);
-        setInterval(function(){
+        var dotsWrap = null, timer = null;
+        function go(n){
           if(slides.length < 2){ return; }
           slides[idx].classList.remove("active");
-          idx = (idx+1) % slides.length;
+          idx = (n + slides.length) % slides.length;
           slides[idx].classList.add("active");
-        }, 4500);
+          if(dotsWrap){
+            var ds = $$("button", dotsWrap);
+            for(var i=0;i<ds.length;i++){ ds[i].classList.toggle("active", i===idx); }
+          }
+        }
+        function resetTimer(){
+          if(timer){ clearInterval(timer); timer = null; }
+          if(slides.length > 1){ timer = setInterval(function(){ go(idx+1); }, 4500); }
+        }
+        if(slides.length > 1){
+          dotsWrap = document.createElement("div");
+          dotsWrap.className = "dots";
+          imgs.forEach(function(b, i){
+            var d = document.createElement("button");
+            d.type = "button"; d.setAttribute("aria-label", "切换到第" + (i+1) + "张图片");
+            d.className = i===0 ? "active" : "";
+            d.addEventListener("click", function(){ go(i); resetTimer(); });
+            dotsWrap.appendChild(d);
+          });
+          carousel.appendChild(dotsWrap);
+          var mkBtn = function(cls, svg, label, fn){
+            var b2 = document.createElement("button");
+            b2.type = "button"; b2.className = cls; b2.setAttribute("aria-label", label);
+            b2.innerHTML = svg;
+            b2.addEventListener("click", fn);
+            return b2;
+          };
+          var chevL = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>';
+          var chevR = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>';
+          carousel.appendChild(mkBtn("nav-btn prev", chevL, "上一张图片", function(){ go(idx-1); resetTimer(); }));
+          carousel.appendChild(mkBtn("nav-btn next", chevR, "下一张图片", function(){ go(idx+1); resetTimer(); }));
+          timer = setInterval(function(){ go(idx+1); }, 4500);
+        }
       }
     }
   }
